@@ -8,6 +8,13 @@
     "48": "icons/videos.png"
   },
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "c2d4f4bac91b@wooptoo.com",
+      "strict_min_version": "96.0"
+    }
+  },
+
   "permissions": [
     "downloads",
     "activeTab"
