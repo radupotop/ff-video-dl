@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "video-dl",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Download Videos",
   "homepage_url": "https://github.com/radupotop/ff-video-dl",
   "icons": {
@@ -26,7 +26,7 @@
   "page_action": {
     "browser_style": true,
     "default_icon": "icons/videos.png",
-    "default_title": "Download Video",
+    "default_title": "Download Video (Ctrl+Shift+0)",
     "show_matches": [
       "*://*.linkedin.com/*"
     ]
@@ -46,7 +46,7 @@
       "suggested_key": {
         "default": "Ctrl+Shift+0"
       },
-      "description": "Download Video (Ctrl+Shift+0)"
+      "description": "Download Video"
     }
   }
 }
