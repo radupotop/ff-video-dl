@@ -40,5 +40,13 @@
         "content.js"
       ]
     }
-  ]
+  ],
+  "commands": {
+    "download-video": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+0"
+      },
+      "description": "Download Video (Ctrl+Shift+0)"
+    }
+  }
 }
