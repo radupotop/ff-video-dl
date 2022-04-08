@@ -1,5 +1,7 @@
+'use strict'
+
 function tabHandler(tab) {
-    browser.tabs.sendMessage(tab.id, {action: 'getURL'})
+    browser.tabs.sendMessage(tab.id, { action: 'getURL' })
 }
 
 function downloadFile(params) {
@@ -7,5 +9,5 @@ function downloadFile(params) {
     browser.downloads.download(params)
 }
 
-browser.pageAction.onClicked.addListener(tabHandler);
+browser.pageAction.onClicked.addListener(tabHandler)
 browser.runtime.onMessage.addListener(downloadFile)
