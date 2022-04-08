@@ -3,15 +3,14 @@
   "name": "video-dl",
   "version": "0.1",
   "description": "Download Videos",
-  "homepage_url": "https://github.com/radupotop",
+  "homepage_url": "https://github.com/radupotop/ff-video-dl",
   "icons": {
     "48": "icons/videos.png"
   },
 
   "permissions": [
     "downloads",
-    "activeTab",
-    "tabs"
+    "activeTab"
   ],
 
   "background": {
