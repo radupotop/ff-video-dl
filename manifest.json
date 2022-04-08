@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "video-dl",
+  "version": "0.1",
+  "description": "Download Videos",
+  "homepage_url": "https://github.com/radupotop",
+  "icons": {
+    "48": "icons/videos.png"
+  },
+
+  "permissions": [
+    "downloads",
+    "activeTab",
+    "tabs"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "page_action": {
+    "browser_style": true,
+    "default_icon": "icons/videos.png",
+    "default_title": "Download Video",
+    "show_matches": ["*://*.linkedin.com/*"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+
+}
