@@ -6,9 +6,25 @@ function tabHandler(tab) {
     browser.tabs.sendMessage(tab.id, { action: 'getURL' })
 }
 
-function downloadFile(params) {
+// Build the blob on the browser side otherwise downloading won't work.
+function buildBlobURL(text_src) {
+    let text_blob = new Blob([text_src], { type: 'text/plain' })
+    return URL.createObjectURL(text_blob)
+}
+
+// Handle building of blob or direct downloading.
+function downloadFile(args) {
+    let params
+    if (args.action === 'build') {
+        params = {
+            filename: args.filename,
+            url: buildBlobURL(args.contents),
+        }
+    } else {
+        params = args
+    }
     console.log('Downloading:', params)
-    browser.downloads.download(params)
+    return browser.downloads.download(params)
 }
 
 // Listeners
