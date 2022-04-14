@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "video-dl",
-  "version": "0.2",
+  "version": "0.4",
   "description": "Download Videos",
   "homepage_url": "https://github.com/radupotop/ff-video-dl",
   "icons": {
