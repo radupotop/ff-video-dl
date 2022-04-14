@@ -6,9 +6,14 @@ function tabHandler(tab) {
     browser.tabs.sendMessage(tab.id, { action: 'getURL' })
 }
 
+function parseTextSrc(text_src) {
+    return String(text_src).replace(/\.\s/g, '\.\n')
+}
+
 // Build the blob on the browser side otherwise downloading won't work.
 function buildBlobURL(text_src) {
-    let text_blob = new Blob([text_src], { type: 'text/plain' })
+    let parsed_text = parseTextSrc(text_src)
+    let text_blob = new Blob([parsed_text], { type: 'text/plain' })
     return URL.createObjectURL(text_blob)
 }
 
