@@ -12,6 +12,8 @@ function downloadFile(params) {
 }
 
 // Listeners
+
+// Keyboard shortcut defined in manifest
 browser.commands.onCommand.addListener(function (command) {
     if (command === 'download-video') {
         let activeTab = browser.tabs.query({ active: true, currentWindow: true })
@@ -19,5 +21,8 @@ browser.commands.onCommand.addListener(function (command) {
     }
 })
 
+// Listener for Clicks on address-bar icon
 browser.pageAction.onClicked.addListener(tabHandler)
+
+// Listener for messages sent from the content.js script
 browser.runtime.onMessage.addListener(downloadFile)
